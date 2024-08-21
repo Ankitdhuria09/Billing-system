@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing System</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+ </head>
+<body>
+    <div class="container">
+        <h1>STORE BILL</h1>
+        <p><strong>HARVIN FASHION</strong></p>
+
+        <p><strong>Your Company Address, +91 9799117737</strong><br></p>
+
+        <label for="buyerName">Buyer Name:</label>
+        <input type="text" id="buyerName" placeholder="Enter Buyer Name">
+
+        <label for="buyerContact">Buyer Contact Number (Optional):</label>
+        <input type="text" id="buyerContact" placeholder="Enter Buyer Contact Number (Optional)">
+
+        <label for="item">Select Item:</label>
+        <select id="item">
+            <option value="Top">Top</option>
+            <option value="Bottom">Bottom</option>
+            <option value="Shirt">Shirt</option>
+            <option value="Tshirt">Tshirt</option>
+        </select>
+
+        <label for="price">Price (₹):</label>
+        <input type="number" id="price" placeholder="Enter Price">
+
+        <label for="discount">Discount (%) (Optional):</label>
+        <input type="number" id="discount" placeholder="Enter Discount (Optional)">
+
+        <button onclick="addItem()">Add Item</button>
+
+        <h2>Items Added</h2>
+        <ul id="itemList"></ul>
+
+        <button onclick="generateBill()">Generate Bill</button>
+
+        <h2>Bill Details</h2>
+        <div id="billOutput"></div>
+
+        <button onclick="exportBillAsImage()">Export as PNG</button>
+        <button onclick="clearBill()">Clear Bill</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
